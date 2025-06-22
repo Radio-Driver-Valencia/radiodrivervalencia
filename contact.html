@@ -7,59 +7,73 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
         rel="stylesheet">
   <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family:'Montserrat',sans-serif;
-      background:#000; color:#fff;
-      text-align:center;
+      font-family: 'Montserrat', sans-serif;
+      background: #000;
+      color: #fff;
+      line-height: 1.5;
     }
     nav {
-      background:#111; padding:1rem;
+      background: #111;
+      padding: 1rem;
+      text-align: center;
     }
     nav a {
-      color:#E10600; margin:0 1rem;
-      text-decoration:none; font-weight:700;
+      color: #E10600;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 700;
     }
     nav a:hover {
-      text-decoration:underline;
+      text-decoration: underline;
     }
     main {
-      max-width:600px; margin:2rem auto;
-      padding:0 1rem; text-align:left;
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 0 1rem;
     }
     h1 {
-      text-align:center;
-      margin-bottom:1.5rem;
-      font-size:2rem;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
     }
     form {
-      display:flex;
-      flex-direction:column;
-      gap:1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
     }
     label {
-      display:flex;
-      flex-direction:column;
-      font-size:1rem;
+      display: flex;
+      flex-direction: column;
+      font-weight: 400;
+      font-size: 1rem;
     }
-    input, textarea {
-      margin-top:.5rem;
-      padding:.5rem;
-      border:none;
-      border-radius:4px;
-      font-size:1rem;
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      margin-top: 0.5rem;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    textarea {
+      resize: vertical;
     }
     button {
-      align-self:flex-start;
-      background:#E10600; color:#fff;
-      border:none;
-      padding:.75rem 1.5rem;
-      font-size:1rem;
-      cursor:pointer;
-      border-radius:4px;
+      align-self: flex-start;
+      background: #E10600;
+      color: #fff;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      border-radius: 4px;
     }
     button:hover {
-      opacity:.9;
+      opacity: 0.9;
     }
   </style>
 </head>
@@ -74,25 +88,24 @@
   <main>
     <h1>Contáctanos</h1>
 
-    <form id="contact-form"
-          action="https://formspree.io/f/mblyzrje"
-          method="POST">
-      <!-- Configuración Formspree -->
-      <input type="hidden" name="_format"  value="json">
-      <input type="hidden" name="_subject" value="Mensaje desde Radio Driver Valencia">
-      <input type="hidden" name="_next"
+    <form action="https://formsubmit.co/info@radiodrivervalencia.es" method="POST">
+      <!-- Disables built-in captcha -->
+      <input type="hidden" name="_captcha" value="false">
+      <!-- Redirect to your thanks.html on success -->
+      <input type="hidden"
+             name="_next"
              value="https://radiodrivervalencia.es/thanks.html">
-      <!-- Honeypot anti-spam -->
-      <input type="text"   name="_gotcha" style="display:none">
+      <!-- Honeypot anti-spam field (dov’è _honey) -->
+      <input type="hidden" name="_honey" value="">
 
       <label>
-        Tu nombre
+        Nombre
         <input type="text" name="name" required>
       </label>
 
       <label>
-        Tu correo electrónico
-        <input type="email" name="_replyto" required>
+        Correo electrónico
+        <input type="email" name="email" required>
       </label>
 
       <label>
