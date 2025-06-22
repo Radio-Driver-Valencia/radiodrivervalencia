@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="es">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contatti – Radio Driver Valencia</title>
+  <title>Contacto – Radio Driver Valencia</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
@@ -72,44 +72,44 @@
 </head>
 <body>
 
-  <!-- Navigazione -->
+  <!-- Navegación -->
   <nav>
-    <a href="index.html">Home</a>
+    <a href="index.html">Inicio</a>
     <a href="blog.html">Blog</a>
-    <a href="contact.html">Contatti</a>
+    <a href="contact.html">Contacto</a>
   </nav>
 
-  <!-- Contenuto principale -->
+  <!-- Contenido principal -->
   <main>
-    <h1>Contattaci</h1>
+    <h1>Contáctanos</h1>
 
     <form id="contact-form"
           action="https://formspree.io/f/mblyzrje"
           method="POST">
       <label>
-        Il tuo nome
+        Tu nombre
         <input type="text" name="name" required>
       </label>
 
       <label>
-        La tua email
+        Tu correo electrónico
         <input type="email" name="_replyto" required>
       </label>
 
       <label>
-        Oggetto
+        Asunto
         <input type="text" name="subject">
       </label>
 
       <label>
-        Messaggio
+        Mensaje
         <textarea name="message" rows="6" required></textarea>
       </label>
 
       <!-- honeypot anti-spam -->
       <input type="text" name="_gotcha" style="display:none">
 
-      <button type="submit">Invia messaggio</button>
+      <button type="submit">Enviar mensaje</button>
     </form>
 
     <p id="form-message"></p>
@@ -120,12 +120,12 @@
     const msg = document.getElementById('form-message');
 
     form.addEventListener('submit', () => {
-      msg.textContent = 'Invio in corso…';
+      msg.textContent = 'Enviando…';
     });
 
-    // Se usi ?success=true dopo il redirect, mostra conferma
+    // Si la URL contiene ?success=true después del envío, muestra confirmación
     if (window.location.search.includes('success=true')) {
-      msg.textContent = 'Grazie! Il tuo messaggio è stato inviato.';
+      msg.textContent = '¡Gracias! Tu mensaje ha sido enviado.';
     }
   </script>
 </body>
