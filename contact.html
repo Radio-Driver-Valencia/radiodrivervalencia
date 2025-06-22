@@ -76,14 +76,12 @@
 </head>
 <body>
 
-  <!-- Navegación -->
   <nav>
     <a href="index.html">Inicio</a>
     <a href="blog.html">Blog</a>
     <a href="contact.html">Contacto</a>
   </nav>
 
-  <!-- Contenido principal -->
   <main>
     <h1>Contáctanos</h1>
 
@@ -93,6 +91,9 @@
       <!-- Configuración de Formspree -->
       <input type="hidden" name="_format" value="plain">
       <input type="hidden" name="_subject" value="Mensaje desde Radio Driver Valencia">
+      <input type="hidden" name="_redirect" value="https://radiodrivervalencia.es/contact.html?success=true">
+      <!-- Campo oculto para bots -->
+      <input type="text" name="_gotcha" style="display:none">
 
       <label>
         Tu nombre
@@ -114,9 +115,6 @@
         <textarea name="message" rows="6" required></textarea>
       </label>
 
-      <!-- Campo oculto para bots -->
-      <input type="text" name="_gotcha" style="display:none">
-
       <button type="submit">Enviar mensaje</button>
     </form>
 
@@ -131,10 +129,10 @@
       msg.textContent = 'Enviando…';
     });
 
-    // Si la URL contiene ?success=true tras el envío, mostramos confirmación
     if (window.location.search.includes('success=true')) {
       msg.textContent = '¡Gracias! Tu mensaje ha sido enviado correctamente.';
     }
   </script>
 </body>
 </html>
+
