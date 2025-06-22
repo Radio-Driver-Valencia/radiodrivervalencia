@@ -6,11 +6,7 @@
   <title>Contacto – Radio Driver Valencia</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Montserrat', sans-serif;
       background: #000;
@@ -59,7 +55,7 @@
       font-size: 1rem;
     }
     button {
-      width: fit-content;
+      align-self: flex-start;
       background: #E10600;
       color: #fff;
       border: none;
@@ -67,7 +63,6 @@
       font-size: 1rem;
       cursor: pointer;
       border-radius: 4px;
-      align-self: flex-start;
     }
     button:hover {
       opacity: 0.9;
@@ -95,7 +90,7 @@
     <form id="contact-form"
           action="https://formspree.io/f/mblyzrje"
           method="POST">
-      <!-- Configuraciones Formspree -->
+      <!-- Configuración de Formspree -->
       <input type="hidden" name="_format" value="plain">
       <input type="hidden" name="_subject" value="Mensaje desde Radio Driver Valencia">
 
@@ -119,7 +114,7 @@
         <textarea name="message" rows="6" required></textarea>
       </label>
 
-      <!-- Honeypot anti-spam -->
+      <!-- Campo oculto para bots -->
       <input type="text" name="_gotcha" style="display:none">
 
       <button type="submit">Enviar mensaje</button>
@@ -136,7 +131,7 @@
       msg.textContent = 'Enviando…';
     });
 
-    // Si la URL contiene ?success=true después del envío, mostrar confirmación
+    // Si la URL contiene ?success=true tras el envío, mostramos confirmación
     if (window.location.search.includes('success=true')) {
       msg.textContent = '¡Gracias! Tu mensaje ha sido enviado correctamente.';
     }
