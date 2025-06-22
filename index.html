@@ -3,37 +3,45 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Titolo della pagina -->
   <title>RadioDriver Valencia</title>
-
-  <!-- Google Font Montserrat -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-
-  <!-- Stili -->
   <style>
-    /* Reset margini/padding e font globale */
-    body {
+    /* Reset base */
+    body, html {
       margin: 0;
       padding: 0;
+      width: 100%;
+    }
+    body {
       font-family: 'Montserrat', sans-serif;
       background: #000;
       color: #fff;
       text-align: center;
     }
 
-    /* Header full-width con banner, contenuto intero */
+    /* Full-bleed header banner */
     .site-header {
-      width: 100%;
-      overflow: hidden;
+      position: relative;
+      width: 100vw;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
     }
     .site-header .banner-logo {
-      width: 100%;             /* occuperà tutta la larghezza */
-      height: 400px;           /* altezza fissa del banner */
-      object-fit: contain;     /* mostra interamente l'immagine */
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 400px;
+      object-fit: contain;
     }
 
-    /* Titolo e slogan */
+    /* Page content container */
+    .content {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
     h1 {
       margin: 1rem 0 0.5rem;
       font-size: 3rem;
@@ -43,52 +51,42 @@
       font-size: 1.4rem;
       color: #E10600;
     }
-
-    /* Player container */
-    .player {
-      margin: 2rem auto;
-    }
-
-    /* Descrizione */
+    .player { margin: 2rem auto; }
     .description {
-      max-width: 600px;
-      margin: 2rem auto 4rem;
-      line-height: 1.4;
       font-size: 1rem;
+      line-height: 1.4;
+      margin-bottom: 4rem;
     }
   </style>
 </head>
 <body>
 
-  <!-- HEADER: banner full-width, contenuto intero -->
+  <!-- FULL-WIDTH BANNER -->
   <header class="site-header">
     <img src="radiodrivervalencia.png" alt="Radio Driver Valencia" class="banner-logo">
   </header>
 
-  <!-- LOGO SECONDARIO + TITOLO -->
-  <img src="logo.png" alt="Logo RadioDriver Valencia" width="200">
-  <h1>RadioDriver Valencia</h1>
-  <p class="slogan">Radio Driver Valencia</p>
+  <div class="content">
+    <!-- LOGO + TITLE -->
+    <img src="logo.png" alt="Logo RadioDriver Valencia" width="200">
+    <h1>RadioDriver Valencia</h1>
+    <p class="slogan">Radio Driver Valencia</p>
 
-  <!-- PLAYER: sostituisci TUO_SID con il tuo SID MCVHost -->
-  <div class="player">
-    <iframe
-      src="https://panel.mcvhost.com/player/?sid=TUO_SID"
-      width="300" height="200"
-      frameborder="0"
-      allow="autoplay">
-    </iframe>
-  </div>
+    <!-- PLAYER -->
+    <div class="player">
+      <iframe src="https://panel.mcvhost.com/player/?sid=TUO_SID"
+              width="300" height="200" frameborder="0" allow="autoplay"></iframe>
+    </div>
 
-  <!-- DESCRIZIONE IN SPAGNOLO -->
-  <div class="description">
-    <p>
-      Radio Driver es la voz de los trabajadores de la carretera: música, noticias, luchas, cultura y libertad.
-      Hablamos el idioma de quienes trabajan, viajan y luchan a diario. Directamente desde Valencia,
-      para toda España (y más allá).
-    </p>
+    <!-- DESCRIPTION -->
+    <div class="description">
+      <p>
+        Radio Driver es la voz de los trabajadores de la carretera: música, noticias, luchas, cultura y libertad.
+        Hablamos el idioma de quienes trabajan, viajan y luchan a diario. Directamente desde Valencia,
+        para toda España (y más allá).
+      </p>
+    </div>
   </div>
 
 </body>
 </html>
-
