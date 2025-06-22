@@ -3,34 +3,39 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Radio Driver Valencia</title>
+  <title>RadioDriver Valencia</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
     /* Base reset and font */
-    * { margin: 0; padding: 0; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Montserrat', sans-serif;
       background: #000;
       color: #fff;
       text-align: center;
     }
-    /* Full-width banner header */
+
+    /* Full-width banner header with constrained height */
     .site-header {
       width: 100%;
       overflow: hidden;
     }
     .site-header .banner-logo {
       display: block;
-      width: 100%;       /* Occupies full width of viewport */
-      height: auto;      /* Preserves aspect ratio */
+      width: 100%;           /* Occupies full viewport width */
+      height: auto;          /* Maintains aspect ratio */
+      max-height: 150px;     /* Constrain height to 150px */
+      object-fit: contain;   /* Show entire image */
     }
+
     /* Main content container */
     .content {
       max-width: 800px;
       margin: 2rem auto;
       padding: 0 1rem;
     }
-    /* Title and subheading */
+
+    /* Title and subheading styles */
     h1 {
       margin: 1rem 0 0.5rem;
       font-size: 3rem;
@@ -40,11 +45,13 @@
       font-size: 1.4rem;
       color: #E10600;
     }
-    /* Player */
+
+    /* Player styling */
     .player {
       margin: 2rem auto;
     }
-    /* Description */
+
+    /* Description styling */
     .description {
       font-size: 1rem;
       line-height: 1.5;
@@ -53,7 +60,8 @@
   </style>
 </head>
 <body>
-  <!-- Full-width banner -->
+
+  <!-- Full-width banner with reduced height -->
   <header class="site-header">
     <img src="radiodrivervalencia.png" alt="Radio Driver Valencia Banner" class="banner-logo">
   </header>
@@ -61,12 +69,14 @@
   <div class="content">
     <!-- Logo + Title -->
     <img src="logo.png" alt="Logo RadioDriver Valencia" width="200">
-    <h1>Radio Driver Valencia</h1>
+    <h1>RadioDriver Valencia</h1>
     <p class="slogan">Radio Driver Valencia</p>
 
-    <!-- Player -->
+    <!-- Player embed -->
     <div class="player">
-      <iframe src="https://panel.mcvhost.com/player/?sid=TUO_SID" width="300" height="200" frameborder="0" allow="autoplay"></iframe>
+      <iframe src="https://panel.mcvhost.com/player/?sid=TUO_SID"
+              width="300" height="200" frameborder="0" allow="autoplay">
+      </iframe>
     </div>
 
     <!-- Spanish description -->
@@ -78,5 +88,6 @@
       </p>
     </div>
   </div>
+
 </body>
 </html>
