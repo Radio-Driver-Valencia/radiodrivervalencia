@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog - RadioDriver Valencia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Montserrat', sans-serif; background: #000; color: #fff; text-align: center; }
+    .site-header { width: 100%; overflow: hidden; }
+    .site-header .banner-logo { width: 100%; height: auto; max-height: 150px; object-fit: contain; }
+    nav { background: #111; padding: 0.5rem; }
+    nav a { color: #E10600; margin: 0 1rem; text-decoration: none; font-weight: 700; }
+    nav a:hover { text-decoration: underline; }
+    .content { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
+    h1 { margin: 1rem 0; font-size: 2.5rem; }
+    .post-list { text-align: left; margin-top: 1rem; }
+    .post-list li { margin-bottom: 0.5rem; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <img src="radiodrivervalencia.png" alt="Radio Driver Valencia" class="banner-logo">
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contatti</a>
+  </nav>
+  <div class="content">
+    <h1>Blog</h1>
+    <ul class="post-list">
+      <li><a href="#" style="color:#E10600;text-decoration:none;">Próximamente: Cómo optimizar tu ruta diaria</a></li>
+      <li><a href="#" style="color:#E10600;text-decoration:none;">Entrevista con un repartidor de Valencia</a></li>
+      <li><a href="#" style="color:#E10600;text-decoration:none;">Noticias del sector VTC y taxi</a></li>
+    </ul>
+  </div>
+</body>
+</html>
