@@ -22,17 +22,15 @@
       text-align: center;
     }
 
-    /* Header full-width con banner */
+    /* Header full-width con banner, contenuto intero */
     .site-header {
       width: 100%;
       overflow: hidden;
     }
     .site-header .banner-logo {
-      display: block;
-      width: 100%;
-      height: auto;
-      max-height: 400px;
-      object-fit: cover;
+      width: 100%;             /* occuperà tutta la larghezza */
+      height: 400px;           /* altezza fissa del banner */
+      object-fit: contain;     /* mostra interamente l'immagine */
     }
 
     /* Titolo e slogan */
@@ -62,7 +60,7 @@
 </head>
 <body>
 
-  <!-- HEADER: banner full-width -->
+  <!-- HEADER: banner full-width, contenuto intero -->
   <header class="site-header">
     <img src="radiodrivervalencia.png" alt="Radio Driver Valencia" class="banner-logo">
   </header>
@@ -70,7 +68,7 @@
   <!-- LOGO SECONDARIO + TITOLO -->
   <img src="logo.png" alt="Logo RadioDriver Valencia" width="200">
   <h1>RadioDriver Valencia</h1>
-  <p class="slogan">Conduce, entrega, escucha: tu radio</p>
+  <p class="slogan">Radio Driver Valencia</p>
 
   <!-- PLAYER: sostituisci TUO_SID con il tuo SID MCVHost -->
   <div class="player">
@@ -93,3 +91,4 @@
 
 </body>
 </html>
+
