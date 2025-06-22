@@ -6,88 +6,85 @@
   <title>RadioDriver Valencia</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* Base reset and font */
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background: #000;
-      color: #fff;
-      text-align: center;
-    }
-
-    /* Full-width banner header with constrained height */
-    .site-header {
-      width: 100%;
-      overflow: hidden;
-    }
-    .site-header .banner-logo {
-      display: block;
-      width: 100%;           /* Occupies full viewport width */
-      height: auto;          /* Maintains aspect ratio */
-      max-height: 150px;     /* Constrain height to 150px */
-      object-fit: contain;   /* Show entire image */
-    }
-
-    /* Main content container */
-    .content {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-
-    /* Title and subheading styles */
-    h1 {
-      margin: 1rem 0 0.5rem;
-      font-size: 3rem;
-    }
-    p.slogan {
-      margin-bottom: 2rem;
-      font-size: 1.4rem;
-      color: #E10600;
-    }
-
-    /* Player styling */
-    .player {
-      margin: 2rem auto;
-    }
-
-    /* Description styling */
-    .description {
-      font-size: 1rem;
-      line-height: 1.5;
-      margin-bottom: 4rem;
-    }
+    body { font-family: 'Montserrat', sans-serif; background: #000; color: #fff; text-align: center; }
+    .site-header { width: 100%; overflow: hidden; }
+    .site-header .banner-logo { width: 100%; height: auto; max-height: 150px; object-fit: contain; }
+    nav { background: #111; padding: 0.5rem; }
+    nav a { color: #E10600; margin: 0 1rem; text-decoration: none; font-weight: 700; }
+    nav a:hover { text-decoration: underline; }
+    .content { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
+    h1 { margin: 1rem 0 0.5rem; font-size: 3rem; }
+    .slogan { margin-bottom: 2rem; font-size: 1.4rem; color: #E10600; }
+    .player { margin: 2rem auto; }
+    .description { font-size: 1rem; line-height: 1.5; margin-bottom: 4rem; }
   </style>
 </head>
 <body>
-
-  <!-- Full-width banner with reduced height -->
   <header class="site-header">
-    <img src="radiodrivervalencia.png" alt="Radio Driver Valencia Banner" class="banner-logo">
+    <img src="radiodrivervalencia.png" alt="Radio Driver Valencia" class="banner-logo">
   </header>
-
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contatti</a>
+  </nav>
   <div class="content">
-    <!-- Logo + Title -->
     <img src="logo.png" alt="Logo RadioDriver Valencia" width="200">
     <h1>RadioDriver Valencia</h1>
     <p class="slogan">Radio Driver Valencia</p>
-
-    <!-- Player embed -->
     <div class="player">
-      <iframe src="https://panel.mcvhost.com/player/?sid=TUO_SID"
-              width="300" height="200" frameborder="0" allow="autoplay">
-      </iframe>
+      <iframe src="https://panel.mcvhost.com/player/?sid=TUO_SID" width="300" height="200" frameborder="0" allow="autoplay"></iframe>
     </div>
-
-    <!-- Spanish description -->
     <div class="description">
       <p>
         Radio Driver es la voz de los trabajadores de la carretera: música, noticias, luchas, cultura y libertad.<br>
-        Hablamos el idioma de quienes trabajan, viajan y luchan a diario. Directamente desde Valencia,
+        Hablamos el idioma de quienes trabajan, viajan y luchan a diario. Directamente desde Valencia,<br>
         para toda España (y más allá).
       </p>
     </div>
   </div>
+</body>
+</html>
 
+<!-- File: blog.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog - RadioDriver Valencia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Montserrat', sans-serif; background: #000; color: #fff; text-align: center; }
+    .site-header { width: 100%; overflow: hidden; }
+    .site-header .banner-logo { width: 100%; height: auto; max-height: 150px; object-fit: contain; }
+    nav { background: #111; padding: 0.5rem; }
+    nav a { color: #E10600; margin: 0 1rem; text-decoration: none; font-weight: 700; }
+    nav a:hover { text-decoration: underline; }
+    .content { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
+    h1 { margin: 1rem 0; font-size: 2.5rem; }
+    .post-list { text-align: left; margin-top: 1rem; }
+    .post-list li { margin-bottom: 0.5rem; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <img src="radiodrivervalencia.png" alt="Radio Driver Valencia" class="banner-logo">
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contatti</a>
+  </nav>
+  <div class="content">
+    <h1>Blog</h1>
+    <ul class="post-list">
+      <li><a href="#" style="color:#E10600;text-decoration:none;">Próximamente: Cómo optimizar tu ruta diaria</a></li>
+      <li><a href="#" style="color:#E10600;text-decoration:none;">Entrevista con un repartidor de Valencia</a></li>
+      <li><a href="#" style="color:#E10600;text-decoration:none;">Noticias del sector VTC y taxi</a></li>
+    </ul>
+  </div>
 </body>
 </html>
