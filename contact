@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contatti - RadioDriver Valencia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Montserrat', sans-serif; background: #000; color: #fff; text-align: center; }
+    .site-header { width: 100%; overflow: hidden; }
+    .site-header .banner-logo { width: 100%; height: auto; max-height: 150px; object-fit: contain; }
+    nav { background: #111; padding: 0.5rem; }
+    nav a { color: #E10600; margin: 0 1rem; text-decoration: none; font-weight: 700; }
+    nav a:hover { text-decoration: underline; }
+    .content { max-width: 600px; margin: 2rem auto; padding: 0 1rem; }
+    h1 { margin: 1rem 0; font-size: 2.5rem; }
+    form { display: flex; flex-direction: column; }
+    form input, form textarea { margin-bottom: 1rem; padding: 0.5rem; font-size: 1rem; }
+    form button { background: #E10600; color: #fff; padding: 0.75rem; border: none; font-size: 1rem; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <img src="radiodrivervalencia.png" alt="Radio Driver Valencia" class="banner-logo">
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contatti</a>
+  </nav>
+  <div class="content">
+    <h1>Contatti</h1>
+    <form action="#" method="post">
+      <input type="text" name="name" placeholder="Tu nombre" required>
+      <input type="email" name="email" placeholder="Tu correo electrónico" required>
+      <textarea name="message" rows="5" placeholder="Tu mensaje" required></textarea>
+      <button type="submit">Invia messaggio</button>
+    </form>
+  </div>
+</body>
+</html>
