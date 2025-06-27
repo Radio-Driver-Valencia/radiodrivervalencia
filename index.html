@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es">    questo è quello attuale
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,39 +14,60 @@
       color: #fff;
       text-align: center;
     }
-    .site-header { width: 100%; overflow: hidden; }
+    .site-header {
+      width: 100%;
+      overflow: hidden;
+    }
     .site-header .banner-logo {
-      width: 100%; max-height: 150px; object-fit: contain;
+      width: 100%;
+      height: auto;
+      max-height: 150px;
+      object-fit: contain;
     }
-    nav { background: #111; padding: .5rem; }
+    nav {
+      background: #111;
+      padding: 0.5rem;
+    }
     nav a {
-      color: #E10600; margin: 0 1rem;
-      text-decoration: none; font-weight:700;
+      color: #E10600;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 700;
     }
-    nav a:hover { text-decoration: underline; }
+    nav a:hover {
+      text-decoration: underline;
+    }
     .content {
-      max-width: 800px; margin: 2rem auto; padding: 0 1rem;
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
     }
-    h1 { margin: 1rem 0 .5rem; font-size: 3rem; }
+    h1 {
+      margin: 1rem 0 0.5rem;
+      font-size: 3rem;
+    }
     .slogan {
-      margin-bottom: 2rem; font-size: 1.4rem; color: #E10600;
+      margin-bottom: 2rem;
+      font-size: 1.4rem;
+      color: #E10600;
     }
     .player {
-      margin: 2rem auto; max-width: 600px;
+      margin: 2rem auto;
     }
     .player h2 {
-      font-size: 1.5rem; margin-bottom: 1rem; color: #E10600;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #E10600;
     }
-    .player iframe {
-      width: 100%; height: 90px; border: none;
-    }
-    .fallback {
-      margin-top: 1rem;
-      color: #ccc;
-      font-size: .9rem;
+    .player audio {
+      width: 100%;
+      max-width: 600px;
+      outline: none;
     }
     .description {
-      font-size: 1rem; line-height: 1.5; margin-bottom:4rem;
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 4rem;
     }
   </style>
 </head>
@@ -70,17 +91,12 @@
 
     <div class="player">
       <h2>¡Escúchanos ahora!</h2>
-      <!-- Embed ufficiale MCVHost con SID corretto -->
-      <iframe
-        src="https://panel2.mcvhost.com/player/?sid=23&autoplay=false"
-        allow="autoplay">
-      </iframe>
-      <div class="fallback">
-        Si el player no carga, usa este enlace:<br>
-        <a href="https://stream2.mcvhost.com/radiodrivervalencia" target="_blank" style="color:#E10600;">
-          Escuchar en nueva ventana
-        </a>
-      </div>
+      <audio controls autoplay preload="none">
+        <source 
+          src="https://stream2.mcvhost.com/radiodrivervalencia" 
+          type="audio/mpeg">
+        Tu navegador no soporta el reproductor de audio.
+      </audio>
     </div>
 
     <div class="description">
