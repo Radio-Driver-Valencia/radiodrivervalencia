@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">    questo è quello attuale
+<html lang="es">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -64,6 +64,41 @@
       max-width: 600px;
       outline: none;
     }
+    .request-form {
+      max-width: 600px;
+      margin: 2rem auto;
+      text-align: left;
+    }
+    .request-form h3 {
+      color: #E10600;
+      font-family: 'Montserrat', sans-serif;
+      margin-bottom: 1rem;
+    }
+    .request-form label {
+      display: block;
+      margin-bottom: .5rem;
+      font-weight: 700;
+    }
+    .request-form input,
+    .request-form textarea {
+      width: 100%;
+      padding: .5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-top: .25rem;
+      margin-bottom: 1rem;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .request-form button {
+      background: #E10600;
+      color: #fff;
+      font-weight: 700;
+      padding: .75rem 1.5rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-family: 'Montserrat', sans-serif;
+    }
     .description {
       font-size: 1rem;
       line-height: 1.5;
@@ -98,6 +133,45 @@
         Tu navegador no soporta el reproductor de audio.
       </audio>
     </div>
+
+    <!-- Inizio modulo richieste canzoni -->
+    <div class="request-form">
+      <h3>¡Solicita tu canción!</h3>
+      <form 
+        action="https://formsubmit.co/info@radiodrivervalencia.es" 
+        method="POST"
+      >
+        <input type="hidden" name="_subject" value="Nueva solicitud de canción">
+        <input type="hidden" name="_language" value="es">
+        <input type="hidden" name="_captcha" value="false">
+        
+        <label for="nombre">Nombre:</label>
+        <input 
+          type="text" 
+          id="nombre"
+          name="Nombre" 
+          required
+        >
+        
+        <label for="cancion">Canción y Artista:</label>
+        <input 
+          type="text" 
+          id="cancion"
+          name="Canción y Artista" 
+          required
+        >
+
+        <label for="mensaje">Dedica / Mensaje:</label>
+        <textarea 
+          id="mensaje"
+          name="Mensaje" 
+          rows="3"
+        ></textarea>
+
+        <button type="submit">Enviar solicitud</button>
+      </form>
+    </div>
+    <!-- Fine modulo richieste canzoni -->
 
     <div class="description">
       <p>
