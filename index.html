@@ -20,7 +20,6 @@
     }
     .site-header .banner-logo {
       width: 100%;
-      height: auto;
       max-height: 150px;
       object-fit: contain;
     }
@@ -53,6 +52,7 @@
     }
     .player {
       margin: 2rem auto;
+      max-width: 600px;
     }
     .player h2 {
       font-size: 1.5rem;
@@ -61,48 +61,54 @@
     }
     .player audio {
       width: 100%;
-      max-width: 600px;
       outline: none;
     }
-    .request-form {
-      max-width: 600px;
+    .request-button-container {
       margin: 2rem auto;
-      text-align: left;
     }
-    .request-form h3 {
-      color: #E10600;
-      font-family: 'Montserrat', sans-serif;
-      margin-bottom: 1rem;
-    }
-    .request-form label {
-      display: block;
-      margin-bottom: .5rem;
-      font-weight: 700;
-    }
-    .request-form input,
-    .request-form textarea {
-      width: 100%;
-      padding: .5rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      margin-top: .25rem;
-      margin-bottom: 1rem;
-      font-family: 'Montserrat', sans-serif;
-    }
-    .request-form button {
+    .request-button {
+      display: inline-block;
       background: #E10600;
       color: #fff;
       font-weight: 700;
-      padding: .75rem 1.5rem;
-      border: none;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
       border-radius: 4px;
-      cursor: pointer;
-      font-family: 'Montserrat', sans-serif;
+      transition: background 0.2s;
+    }
+    .request-button:hover {
+      background: #c00500;
     }
     .description {
       font-size: 1rem;
       line-height: 1.5;
       margin-bottom: 4rem;
+    }
+    footer {
+      background: #111;
+      padding: 1rem 0;
+      margin-top: 2rem;
+    }
+    .footer-links {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .footer-links a {
+      color: #E10600;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 0.5rem 1rem;
+      border: 1px solid #E10600;
+      border-radius: 4px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .footer-links a:hover {
+      background: #E10600;
+      color: #000;
     }
   </style>
 </head>
@@ -134,44 +140,9 @@
       </audio>
     </div>
 
-    <!-- Inizio modulo richieste canzoni -->
-    <div class="request-form">
-      <h3>¡Solicita tu canción!</h3>
-      <form 
-        action="https://formsubmit.co/info@radiodrivervalencia.es" 
-        method="POST"
-      >
-        <input type="hidden" name="_subject" value="Nueva solicitud de canción">
-        <input type="hidden" name="_language" value="es">
-        <input type="hidden" name="_captcha" value="false">
-        
-        <label for="nombre">Nombre:</label>
-        <input 
-          type="text" 
-          id="nombre"
-          name="Nombre" 
-          required
-        >
-        
-        <label for="cancion">Canción y Artista:</label>
-        <input 
-          type="text" 
-          id="cancion"
-          name="Canción y Artista" 
-          required
-        >
-
-        <label for="mensaje">Dedica / Mensaje:</label>
-        <textarea 
-          id="mensaje"
-          name="Mensaje" 
-          rows="3"
-        ></textarea>
-
-        <button type="submit">Enviar solicitud</button>
-      </form>
+    <div class="request-button-container">
+      <a href="solicita.html" class="request-button">¡Solicita tu canción!</a>
     </div>
-    <!-- Fine modulo richieste canzoni -->
 
     <div class="description">
       <p>
@@ -181,6 +152,16 @@
       </p>
     </div>
   </div>
+
+  <footer>
+    <div class="footer-links">
+      <a href="solicita.html">Solicita tu canción</a>
+      <a href="contact.html">Contacto</a>
+      <a href="programa.html">Programa</a>
+      <a href="https://wa.me/_____" target="_blank">WhatsApp</a>
+      <a href="https://www.youtube.com/_____" target="_blank">YouTube</a>
+    </div>
+  </footer>
 
 </body>
 </html>
