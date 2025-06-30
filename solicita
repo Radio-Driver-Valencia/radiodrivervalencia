@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Solicita tu canción – Radio Driver Valencia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+        rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #000;
+      color: #fff;
+      text-align: center;
+    }
+    .site-header {
+      width: 100%;
+      overflow: hidden;
+    }
+    .site-header .banner-logo {
+      width: 100%;
+      max-height: 150px;
+      object-fit: contain;
+      margin-bottom: 1rem;
+    }
+    nav {
+      background: #111;
+      padding: 0.5rem;
+    }
+    nav a {
+      color: #E10600;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .content {
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      text-align: left;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    form {
+      margin-top: 1rem;
+    }
+    label {
+      display: block;
+      margin-bottom: 0.25rem;
+      font-weight: 700;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #444;
+      border-radius: 4px;
+      background: #111;
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+    }
+    input:focus, textarea:focus {
+      outline: 2px solid #E10600;
+    }
+    button {
+      display: block;
+      width: 100%;
+      background: #E10600;
+      color: #fff;
+      font-weight: 700;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    button:hover {
+      background: #c00500;
+    }
+    .footer {
+      margin-top: 3rem;
+      padding: 1rem 0;
+      background: #111;
+      text-align: center;
+    }
+    .footer a {
+      color: #E10600;
+      text-decoration: none;
+      margin: 0 .5rem;
+      font-weight: 700;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <img src="radiodrivervalencia.png" alt="Radio Driver Valencia" class="banner-logo">
+  </header>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contacto</a>
+  </nav>
+
+  <div class="content">
+    <h1>¡Solicita tu canción!</h1>
+    <form action="https://formsubmit.co/info@radiodrivervalencia.es" method="POST">
+      <!-- Configuración FormSubmit -->
+      <input type="hidden" name="_subject" value="Nueva solicitud de canción">
+      <input type="hidden" name="_language" value="es">
+      <input type="hidden" name="_captcha" value="false">
+
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="Nombre" placeholder="Tu nombre" required>
+
+      <label for="cancion">Canción y Artista:</label>
+      <input type="text" id="cancion" name="Canción y Artista" placeholder="Título y artista" required>
+
+      <label for="mensaje">Dedica / Mensaje:</label>
+      <textarea id="mensaje" name="Mensaje" rows="4" placeholder="Tu dedicatoria (opcional)"></textarea>
+
+      <button type="submit">Enviar solicitud</button>
+    </form>
+  </div>
+
+  <footer class="footer">
+    <a href="index.html">Volver al inicio</a>
+    <a href="contact.html">Contacto</a>
+  </footer>
+
+</body>
+</html>
