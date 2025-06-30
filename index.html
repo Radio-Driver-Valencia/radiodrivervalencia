@@ -20,6 +20,7 @@
     }
     .site-header .banner-logo {
       width: 100%;
+      height: auto;
       max-height: 150px;
       object-fit: contain;
     }
@@ -52,7 +53,6 @@
     }
     .player {
       margin: 2rem auto;
-      max-width: 600px;
     }
     .player h2 {
       font-size: 1.5rem;
@@ -61,54 +61,31 @@
     }
     .player audio {
       width: 100%;
+      max-width: 600px;
       outline: none;
-    }
-    .request-button-container {
-      margin: 2rem auto;
-    }
-    .request-button {
-      display: inline-block;
-      background: #E10600;
-      color: #fff;
-      font-weight: 700;
-      padding: 0.75rem 1.5rem;
-      text-decoration: none;
-      border-radius: 4px;
-      transition: background 0.2s;
-    }
-    .request-button:hover {
-      background: #c00500;
     }
     .description {
       font-size: 1rem;
       line-height: 1.5;
       margin-bottom: 4rem;
     }
+    .crowdfunding {
+      margin: 2rem auto;
+    }
+    .crowdfunding a img {
+      max-width: 250px;
+      height: auto;
+    }
     footer {
       background: #111;
       padding: 1rem 0;
-      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #888;
     }
-    .footer-links {
-      max-width: 800px;
-      margin: 0 auto;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-    }
-    .footer-links a {
+    footer a {
       color: #E10600;
       text-decoration: none;
-      font-weight: 700;
-      padding: 0.5rem 1rem;
-      border: 1px solid #E10600;
-      border-radius: 4px;
-      transition: background 0.2s, color 0.2s;
-    }
-    .footer-links a:hover {
-      background: #E10600;
-      color: #000;
+      margin: 0 0.5rem;
     }
   </style>
 </head>
@@ -140,10 +117,6 @@
       </audio>
     </div>
 
-    <div class="request-button-container">
-      <a href="solicita.html" class="request-button">¡Solicita tu canción!</a>
-    </div>
-
     <div class="description">
       <p>
         Radio Driver es la voz de los trabajadores de la carretera: música, noticias, luchas, cultura y libertad.<br>
@@ -151,16 +124,20 @@
         para toda España (y más allá).
       </p>
     </div>
+
+    <!-- Pulsante Crowdfunding -->
+    <div class="crowdfunding">
+      <a href="https://www.gofundme.com/f/radio-driver-valencia-la-voce-di-chi-guida?utm_campaign=man_sharesheet_dash&utm_medium=customer&utm_source=copy_link&lang=it_IT&attribution_id=sl%3Ab7c52013-2171-46d8-acc6-56341dc2a06b&ts=1750944143"
+         target="_blank" rel="noopener">
+        <img src="crowdfunding.png" alt="Apóyanos en GoFundMe">
+      </a>
+    </div>
   </div>
 
   <footer>
-    <div class="footer-links">
-      <a href="solicita.html">Solicita tu canción</a>
-      <a href="contact.html">Contacto</a>
-      <a href="programa.html">Programa</a>
-      <a href="https://wa.me/_____" target="_blank">WhatsApp</a>
-      <a href="https://www.youtube.com/_____" target="_blank">YouTube</a>
-    </div>
+    <!-- Se vuoi puoi ripetere qui i link a YouTube e WhatsApp -->
+    <a href="https://www.youtube.com/YourChannel" target="_blank">YouTube</a> |
+    <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
   </footer>
 
 </body>
