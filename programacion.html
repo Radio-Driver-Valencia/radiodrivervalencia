@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Programación – Radio Driver Valencia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+        rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #000;
+      color: #fff;
+      text-align: center;
+    }
+    .site-header { width: 100%; overflow: hidden; }
+    .site-header .banner-logo {
+      width: 100%; height: auto; max-height: 150px; object-fit: contain;
+    }
+    nav {
+      background: #111; padding: 0.5rem;
+    }
+    nav a {
+      color: #E10600; margin: 0 1rem; text-decoration: none; font-weight: 700;
+    }
+    nav a:hover { text-decoration: underline; }
+    .content { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+    h1 { margin-bottom: 1.5rem; font-size: 2.5rem; }
+    table {
+      width: 100%; border-collapse: collapse; margin-bottom: 2rem;
+    }
+    th, td {
+      border: 1px solid #333; padding: 0.75rem; text-align: left;
+    }
+    th { background: #111; font-size: 1rem; }
+    td.time { width: 80px; font-weight: 700; }
+    /* Colori per programma (emoji + testo) */
+    td.programa .azul { color: #007BFF; font-weight: 700; }
+    td.programa .rojo { color: #E10600; font-weight: 700; }
+    td.programa .marron { color: #A52A2A; font-weight: 700; }
+    td.programa .verde { color: #28A745; font-weight: 700; }
+    td.programa .purpura { color: #6F42C1; font-weight: 700; }
+    td.note { font-style: italic; color: #ccc; }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <img src="radiodrivervalencia.png" alt="Radio Driver Valencia" class="banner-logo">
+  </header>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="programación.html">Programación</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contacto</a>
+  </nav>
+
+  <div class="content">
+    <h1>Programación de Radio Driver Valencia</h1>
+
+    <h2>☀️ FASCIA DIURNA (06:00 – 21:00)</h2>
+    <table>
+      <tr>
+        <th>Hora</th>
+        <th>Programa</th>
+        <th>Notas</th>
+      </tr>
+      <tr>
+        <td class="time">06:00</td>
+        <td class="programa azul">🟦 Despertador Driver</td>
+        <td class="note">Música energica + notizie leggere</td>
+      </tr>
+      <tr>
+        <td class="time">07:00</td>
+        <td class="programa">RTC – Anticipo</td>
+        <td class="note">Pre-edizione breve del giornale</td>
+      </tr>
+      <tr>
+        <td class="time">08:00</td>
+        <td class="programa azul">🟦 Radiogiornale RTC</td>
+        <td class="note">Edizione 1 – attualità</td>
+      </tr>
+      <tr>
+        <td class="time">09:00</td>
+        <td class="programa">Contrato Explicado Fácil</td>
+        <td class="note">Pillola legale settimanale (lunedì)</td>
+      </tr>
+      <tr>
+        <td class="time">10:00</td>
+        <td class="programa">Habla el Volante</td>
+        <td class="note">Replica ep. giorno prima</td>
+      </tr>
+      <tr>
+        <td class="time">11:30</td>
+        <td class="programa marron">🟫 Pausa Café con Elena</td>
+        <td class="note">Attivo lun/merc/sab</td>
+      </tr>
+      <tr>
+        <td class="time">12:00</td>
+        <td class="programa rojo">🟥 Sobrevivir en la Calle</td>
+        <td class="note">Consiglio pratico quotidiano</td>
+      </tr>
+      <tr>
+        <td class="time">13:00</td>
+        <td class="programa azul">🟦 RTC Edizione 2</td>
+        <td class="note">Notizie aggiornate</td>
+      </tr>
+      <tr>
+        <td class="time">14:00</td>
+        <td class="programa">Música de Medio Turno</td>
+        <td class="note">Canzone + storia (emozionale)</td>
+      </tr>
+      <tr>
+        <td class="time">15:00</td>
+        <td class="programa">Habla el Volante</td>
+        <td class="note">Episodio nuovo del giorno</td>
+      </tr>
+      <tr>
+        <td class="time">16:00</td>
+        <td class="programa purpura">🟪 Música de Medio Turno</td>
+        <td class="note">Replica + variazioni</td>
+      </tr>
+      <tr>
+        <td class="time">17:00</td>
+        <td class="programa">Sobrevivir en la Calle</td>
+        <td class="note">Replica episodio 2</td>
+      </tr>
+      <tr>
+        <td class="time">18:00</td>
+        <td class="programa verde">🟩 Habla el Volante</td>
+        <td class="note">Episodio ufficiale del giorno</td>
+      </tr>
+      <tr>
+        <td class="time">19:00</td>
+        <td class="programa">RTC – Breve</td>
+        <td class="note">Riepilogo notizie + eventi serali</td>
+      </tr>
+      <tr>
+        <td class="time">20:00</td>
+        <td class="programa azul">🟦 RTC Edizione 3</td>
+        <td class="note">Chiusura giornata</td>
+      </tr>
+      <tr>
+        <td class="time">21:00</td>
+        <td class="programa">🟨 Tassisti Anónimos</td>
+        <td class="note">Satira – attivo mar/ven</td>
+      </tr>
+    </table>
+
+    <h2>🌙 FASCIA NOTTURNA (21:00 – 06:00)</h2>
+    <table>
+      <tr>
+        <th>Hora</th>
+        <th>Programa</th>
+        <th>Notas</th>
+      </tr>
+      <tr>
+        <td class="time">22:00</td>
+        <td class="programa">Habla el Volante – edición extendida</td>
+        <td class="note">2 racconti + musica jazz sottofondo</td>
+      </tr>
+      <tr>
+        <td class="time">23:00</td>
+        <td class="programa">Drivers sin Fronteras</td>
+        <td class="note">Storie migranti – replica + commento notturno</td>
+      </tr>
+      <tr>
+        <td class="time">00:00</td>
+        <td class="programa">Especial Radial Temático</td>
+        <td class="note">Approfondimento mensile</td>
+      </tr>
+      <tr>
+        <td class="time">01:00</td>
+        <td class="programa">Jazz sin GPS</td>
+        <td class="note">Musica jazz + citazioni di vita</td>
+      </tr>
+      <tr>
+        <td class="time">02:00</td>
+        <td class="programa">Café Nocturno con Elena</td>
+        <td class="note">Pensieri in libertà, voce lenta</td>
+      </tr>
+      <tr>
+        <td class="time">03:00</td>
+        <td class="programa">Sobrevivir en la Calle – versión extendida</td>
+        <td class="note">3 consigli rilassati e meditativi</td>
+      </tr>
+      <tr>
+        <td class="time">04:00</td>
+        <td class="programa">Reflejos del Parabrisas</td>
+        <td class="note">Programma poetico di testimonianze anonime</td>
+      </tr>
+      <tr>
+        <td class="time">05:00</td>
+        <td class="programa">Silencio Rodante</td>
+        <td class="note">Solo musica + pensieri vocali</td>
+      </tr>
+    </table>
+
+  </div><!-- /.content -->
+
+</body>
+</html>
